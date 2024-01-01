@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Title</title>
+</head>
+<body>
+
+
+<!-- <p th:text=" ${student.toString()}"/>-->
+<!-- <p th:text=" ${student.toString()}"/>-->
+ <p th:text=" ${student.firstName}"/>
+ <p th:text=" ${student.lastName}"/>
+ <p th:text=" ${student.country}"/>
+ <p th:text=" ${student.gender}"/>
+<!-- <p th:text=" ${student.operatingSystems}"/>-->
+
+<ul>
+    <li  th:each="it : ${student.operatingSystems}" th:text="${it}" />
+</ul>
+</body>
+</html>

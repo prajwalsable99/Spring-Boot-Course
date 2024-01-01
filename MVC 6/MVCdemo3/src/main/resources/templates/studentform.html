@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Title</title>
+</head>
+<body>
+
+
+    <form th:action="@{/results}" method="POST" th:object="${student}">
+
+        first Name <input type="text" th:field="${student.firstName}">
+        <br>
+        last Name <input type="text" th:field="${student.lastName}">
+
+        <br>
+    country
+        <!--        <select  th:field="${student.country}" >>-->
+        <!--            <option th:value="ENGLAND" >England</option>-->
+        <!--            <option th:value="USA" >USA</option>-->
+        <!--            <option th:value="INDIA" >INDIA</option>-->
+        <!--            <option th:value="FRANCE" >FRANCE</option>-->
+        <!--        </select>-->
+
+
+        <select  th:field="${student.country}" >
+            <option th:each="it : ${countries}" th:value="${it}" th:text="${it}"/>
+
+        </select>
+
+
+
+        <br>
+        Gender:
+<!--        <input type="radio" th:field="*{gender}" th:value="Male" id="male" />-->
+<!--        <label for="male">Male</label>-->
+
+<!--        <input type="radio" th:field="*{gender}" th:value="Female" id="female" />-->
+<!--        <label for="female">Female</label>-->
+
+<!--        <input type="radio" th:field="*{gender}" th:value="Other" id="other" />-->
+<!--        <label for="other">Other</label>-->
+
+        <input type="radio" th:field="${student.gender}" th:each="it : ${genders}" th:value="${it}" th:text="${it}"/>
+
+
+
+        <br>
+        FAV OS :
+<!--        linux <input type="checkbox" th:field="*{operatingSystems}" th:value="linux-os">-->
+<!--        max<input type="checkbox" th:field="*{operatingSystems}" th:value="mac-os">-->
+<!--        windows<input type="checkbox" th:field="*{operatingSystems}" th:value="windows-os">-->
+
+
+        <input type="checkbox" th:field="${student.operatingSystems}" th:each="it : ${ops}" th:value="${it}" th:text="${it}"/>
+
+        <br/>
+
+
+
+
+        <button type="submit" >Enter</button>
+
+    </form>
+
+
+
+</body>
+</html>

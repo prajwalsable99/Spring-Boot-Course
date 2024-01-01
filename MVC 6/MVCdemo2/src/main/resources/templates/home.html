@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Title</title>
+</head>
+<body>
+
+<p th:text=" 'Date is ' + ${dateVar}" class="funny"/>
+
+<form th:action="@{/results3}" method="GET">
+
+    <input type="text" name="fname"/>
+    <button type="submit"  >enter</button>
+
+
+</form>
+</body>
+</html>

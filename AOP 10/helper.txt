@@ -1,0 +1,9 @@
+1. @before aspect
+2. pointcuts its declarations and patterns
+3. ordering aspect
+4. getting method name and params using jointPoints
+5.@AfterReturning
+6.@AfterThrowing
+7.@After
+8.@Around
+9.@Around handle exceptions 

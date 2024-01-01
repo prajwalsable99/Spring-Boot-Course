@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" th:href="@{/css/style.css}" />-->
+    <title>Title</title>
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+
+<form th:action="@{/results}" method="POST" th:object="${customer}">
+
+<!--    first Name-->
+    first Name <input type="text" th:field="${customer.firstName}">
+    <br>
+    <span th:if ="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="error"></span>
+
+    <br>
+
+<!--   last Name-->
+
+
+
+    last Name <input type="text" th:field="${customer.lastName}">
+    <br>
+    <span th:if ="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
+    <br>
+
+
+<!--    items-->
+
+    Items <input type="text" th:field="${customer.items}">
+    <br>
+    <span th:if ="${#fields.hasErrors('items')}" th:errors="*{items}" class="error"></span>
+    <br>
+
+    <!--     postalCode-->
+
+   Postal code <input type="text" th:field="${customer.postalCode}">
+    <br>
+    <span th:if ="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error"></span>
+    <br>
+
+
+    <!--     postalCode-->
+
+    courseCode <input type="text" th:field="${customer.courseCode}">
+    <br>
+    <span th:if ="${#fields.hasErrors('courseCode')}" th:errors="*{courseCode}" class="error"></span>
+    <br>
+
+
+
+    <!--    sunmit-->
+
+    <button type="submit">Enter</button>
+</form>
+
+
+
+
+</body>
+</html>

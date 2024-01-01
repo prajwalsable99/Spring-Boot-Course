@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Leadership Meeting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        .meeting-details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2 class="mt-4">Leadership Meeting</h2>
+    <hr>
+    <p>Welcome to the Leadership section. Here are some details about the meeting:</p>
+
+    <div class="meeting-details">
+        <h4>Meeting Details</h4>
+        <ul>
+            <li><strong>Date:</strong> January 25, 2024</li>
+            <li><strong>Time:</strong> 10:00 AM - 12:00 PM</li>
+            <li><strong>Location:</strong> Conference Room A</li>
+        </ul>
+        <p>This meeting will focus on strategic planning and team development.</p>
+    </div>
+
+    <div class="mt-4">
+        <h4>Agenda</h4>
+        <ol>
+            <li>Review of last quarter's performance</li>
+            <li>Discussion on upcoming projects</li>
+            <li>Team building exercises</li>
+            <li>Q&A session</li>
+        </ol>
+    </div>
+
+    <a th:href="@{/}" class="btn btn-primary mt-4">Go Back</a>
+</div>
+</body>
+
+</html>
